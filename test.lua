@@ -47,7 +47,7 @@ if (X ~= nil) and (Y ~= nil) and (Z ~= nil) then
         for j=1, Z do
             DigForward(X)
             TurnTurtle()
-            DigForwards(X)
+            DigForward(X)
         end
         if turtle.detectDown() then
             turtle.digDown()
