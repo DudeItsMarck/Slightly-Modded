@@ -56,4 +56,5 @@ if (X ~= nil) and (Y ~= nil) and (Z ~= nil) then
     end
 else
     print("Please fill out the arguments.")
+    print("test")
 end
