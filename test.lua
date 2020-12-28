@@ -18,7 +18,7 @@ function DigForward(idx)
 end
 
 function TurnTurtle()
-    if right then
+    if right == true then
         turtle.turnRight()
         if turtle.detect() then
             turtle.dig()
@@ -35,8 +35,6 @@ function TurnTurtle()
         turtle.turnLeft()
         right = true
     end
-    right = not right
-
 end
 
 if (X ~= nil) and (Y ~= nil) and (Z ~= nil) then
@@ -49,6 +47,7 @@ if (X ~= nil) and (Y ~= nil) and (Z ~= nil) then
             TurnTurtle()
             DigForward(X)
         end
+        right = not right
         if turtle.detectDown() then
             turtle.digDown()
         end
