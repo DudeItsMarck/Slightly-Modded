@@ -2,7 +2,6 @@ local args = {...}
 local X = args[1]
 local Y = args[2]
 local Z = args[3]
-local right = true
 
 function DigForward(idx)
     for k=1, idx do
@@ -35,6 +34,11 @@ function TurnTurtle(idx)
     end
 end
 
+function Turn180()
+    turtle.turnRight()
+    turtle.turnRight()
+end
+
 if (X ~= nil) and (Y ~= nil) and (Z ~= nil) then
     turtle.digDown()
     turtle.down()
@@ -44,11 +48,12 @@ if (X ~= nil) and (Y ~= nil) and (Z ~= nil) then
             DigForward(X)
             TurnTurtle(j)
         end
-        right = not right
+        DigForward(X)
         if turtle.detectDown() then
             turtle.digDown()
         end
         turtle.down()
+        Turn180()
     end
 else
     print("Please fill out the arguments.")
