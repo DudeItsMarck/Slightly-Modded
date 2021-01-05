@@ -4,5 +4,8 @@ local monitor = peripheral.find("monitor")
 local firstItem = breeder.getItem(1).getMetadata()
 local secondItem = breeder.getItem(2).getMetadata()
 
-print("First slot strength: " .. tostring(firstItem.roost.strength))
-print("Second slot strength: " .. tostring(secondItem.roost.strength))
+monitor.setCursorPos(1, 1)
+monitor.write("First slot strength: " .. tostring(firstItem.roost.strength))
+
+monitor.setCursorPos(2, 1)
+monitor.write("Second slot strength: " .. tostring(secondItem.roost.strength))
