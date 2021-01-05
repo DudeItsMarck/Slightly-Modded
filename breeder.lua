@@ -7,5 +7,5 @@ local secondItem = breeder.getItem(2).getMetadata()
 monitor.setCursorPos(1, 1)
 monitor.write("First slot strength: " .. tostring(firstItem.roost.strength))
 
-monitor.setCursorPos(2, 1)
+monitor.setCursorPos(1, 2)
 monitor.write("Second slot strength: " .. tostring(secondItem.roost.strength))
